@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Los 8 Escalones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+    <div class="logo">LOS <span class="big">8</span> ESCALONES</div>
+</header>
+
+<!-- Setup inicial -->
+<section class="panel" id="setup">
+    <h2>Cargar participantes</h2>
+    <p>Ingresá hasta 10 nombres (uno por línea o separados por coma):</p>
+    <textarea id="namesInput" rows="5" placeholder="Ej: Ana
+Luis
+María, Pedro"></textarea>
+    <div class="row">
+        <button class="btn" id="startBtn">Iniciar</button>
+        <span id="error" class="error"></span>
+    </div>
+</section>
+
+<!-- Juego -->
+<main class="container hidden" id="game">
+    <!-- Escenario -->
+    <section class="stage">
+        <div class="dots"></div>
+        <div class="steps" id="steps">
+            <!-- Se renderiza por JS -->
+        </div>
+        <div class="podium"></div>
+    </section>
+
+    <!-- Panel de control -->
+    <aside class="panel">
+        <h2>Participantes</h2>
+        <ul id="roster" class="roster"><!-- JS --></ul>
+
+        <div class="controls">
+            <button class="btn secondary" id="resetAllBtn" title="Reiniciar todos a Escalón 1">Reiniciar todos</button>
+            <button class="btn secondary" id="undoBtn" title="Deshacer último movimiento">Deshacer</button>
+        </div>
+    </aside>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
+
